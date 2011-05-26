@@ -146,11 +146,49 @@ Der Bahnübergang ist eine Transition auf der Bahnstrecke zwischen zwei Gleisabs
 
 Für \(x_1=0\), \(x_{10}=0\): \(I_{P_1} = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)^T\)
 
-Für \(x_1=0\), \(x_{10}=1\): \(I_{P_1} = (0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1)^T\)
+Für \(x_1=0\), \(x_{10}=1\): \(I_{P_2} = (0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1)^T\)
 
 \end{enumerate}
 
 (b) Berechnet die T-Invarianten Euer Gleisanlage.
+
+Lösung des Gleichungssystems \( \underline{I} * x = \underline{0} \):
+
+\( \begin{pmatrix}
+ 1 & 1 & 0 & 0 & 0 & 0 &-1 & 0 & 0 & 0 & 0 & 0 \\
+-1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 0 &-1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
+ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 &-1 & 0 \\
+ 0 & 0 &-1 &-1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 &-1 & 0 & 0 \\
+ 0 & 0 & 0 & 0 &-1 & 1 & 0 & 0 & 0 & 0 & 1 & 0 \\
+ 0 & 0 & 0 & 0 &-1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+ 0 & 0 & 0 & 0 & 0 &-1 & 1 & 0 & 0 & 0 & 0 &-1 \\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 &-1 & 1 & 0 & 0 & 0 \\
+ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 &-1 & 0 & 0 & 0 \\
+\end{pmatrix} = x = \underline{0} \)
+
+\( x_1 = x_3 = 0 \)
+
+\( x_8 = x_9 \)
+
+\( x_2 = x_6 = x_7 = x_{10} \)
+
+\( x_4 = x_5 = x_{11} = 0\)
+
+\( -x_5 + x_6 + x_{11} = 0 \Rightarrow -x_5 + x_1 + x_5 = 0 \Rightarrow x_1 = 0 \)
+
+\( x_1 + x_2 - x_7 = 0 \Rightarrow 0 + x_2 - x_7 = 0 \Rightarrow x_2 = x_7 \)
+
+\( -x_6 + x_7 - x_{12} = 0 \Rightarrow -x_2 + x_2 - x_{12} = 0 \Rightarrow x_{12} = 0 \)
+
+\( -x_3 - x_4 + x_5 + x_{12} = 0 \Rightarrow 0 - x_4 - x_4 + 0 = 0 \Rightarrow x_4 = 0 \)
+
+\(x_2\) und \(x_8\) beliebig.
+
+Für \(x_2=0\), \(x_8=0\): \(I_{T_1}=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)\)
+
+Für \(x_2=0\), \(x_8=1\): \(I_{T_2}=(0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0)\)
 
 (c) Berechnet den Erreichbarkeitsgraph Eurer Gleisanlage.
 

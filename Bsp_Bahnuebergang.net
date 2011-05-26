@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><pnml xmlns = "http://www.irt.rwth-aachen.de/download/netlab/pntd/pnsmNet">
+  <net id = "n1"
+       type = "http://www.irt.rwth-aachen.de/download/netlab/pntd/pnsmNet">
+    <name>
+      <text>Bsp_Bahnuebergang</text>
+    </name>
+    <place id = "p1">
+      <graphics>
+        <position x = "340"
+                  y = "180"/>
+        <dimension x = "40"
+                   y = "40"/>
+      </graphics>
+      <initialMarking>
+        <text>0</text>
+      </initialMarking>
+      <capacity>
+        <text>1</text>
+      </capacity>
+      <name>
+        <text>Gleis 1</text>
+        <graphics>
+          <offset x = "0"
+                  y = "-28"/>
+        </graphics>
+      </name>
+    </place>
+    <place id = "p2">
+      <graphics>
+        <position x = "340"
+                  y = "380"/>
+        <dimension x = "40"
+                   y = "40"/>
+      </graphics>
+      <initialMarking>
+        <text>0</text>
+      </initialMarking>
+      <capacity>
+        <text>1</text>
+      </capacity>
+      <name>
+        <text>Gleis 2</text>
+        <graphics>
+          <offset x = "0"
+                  y = "-28"/>
+        </graphics>
+      </name>
+    </place>
+    <place id = "p3">
+      <graphics>
+        <position x = "160"
+                  y = "280"/>
+        <dimension x = "40"
+                   y = "40"/>
+      </graphics>
+      <initialMarking>
+        <text>1</text>
+      </initialMarking>
+      <capacity>
+        <text>1</text>
+      </capacity>
+      <name>
+        <text>Bahn&#252;bergang frei</text>
+        <graphics>
+          <offset x = "0"
+                  y = "-28"/>
+        </graphics>
+      </name>
+    </place>
+    <place id = "p4">
+      <graphics>
+        <position x = "160"
+                  y = "140"/>
+        <dimension x = "40"
+                   y = "40"/>
+      </graphics>
+      <initialMarking>
+        <text>0</text>
+      </initialMarking>
+      <capacity>
+        <text>1</text>
+      </capacity>
+      <name>
+        <text>Bahn&#252;bergang belegt</text>
+        <graphics>
+          <offset x = "0"
+                  y = "-28"/>
+        </graphics>
+      </name>
+    </place>
+    <transition id = "t1">
+      <graphics>
+        <position x = "340"
+                  y = "280"/>
+        <dimension x = "40"
+                   y = "40"/>
+      </graphics>
+      <name>
+        <text>Bahn&#252;bergang</text>
+        <graphics>
+          <offset x = "0"
+                  y = "-28"/>
+        </graphics>
+      </name>
+    </transition>
+    <transition id = "t2">
+      <graphics>
+        <position x = "100"
+                  y = "200"/>
+        <dimension x = "40"
+                   y = "40"/>
+      </graphics>
+      <name>
+        <text>B&#252; verlassen</text>
+        <graphics>
+          <offset x = "0"
+                  y = "-28"/>
+        </graphics>
+      </name>
+    </transition>
+    <transition id = "t3">
+      <graphics>
+        <position x = "220"
+                  y = "200"/>
+        <dimension x = "40"
+                   y = "40"/>
+      </graphics>
+      <name>
+        <text>Bahn&#252;bergang betreten</text>
+        <graphics>
+          <offset x = "0"
+                  y = "-28"/>
+        </graphics>
+      </name>
+    </transition>
+    <arc id = "a1"
+         source = "p2"
+         target = "t1"/>
+    <arc id = "a2"
+         source = "t1"
+         target = "p1"/>
+    <arc id = "a3"
+         source = "p3"
+         target = "t1">
+      <graphics>
+        <position x = "240"
+                  y = "300"/>
+      </graphics>
+    </arc>
+    <arc id = "a4"
+         source = "t1"
+         target = "p3">
+      <graphics>
+        <position x = "260"
+                  y = "240"/>
+      </graphics>
+    </arc>
+    <arc id = "a5"
+         source = "p3"
+         target = "t3"/>
+    <arc id = "a6"
+         source = "t3"
+         target = "p4"/>
+    <arc id = "a7"
+         source = "p4"
+         target = "t2"/>
+    <arc id = "a8"
+         source = "t2"
+         target = "p3"/>
+    <toolspecific tool = "netlab"
+                  version = "1.8">
+      <developer_release version = "1,8,0,0"
+                         build = "3381"
+                         svn_revision = "419"
+                         year = "2007"
+                         month = "06"
+                         day = "22"/>
+      <view xmlns = "http://www.irt.rwth-aachen.de/download/netlab"
+            zoom = "100"
+            grid = "true"
+            numbering = "true"
+            names = "false"
+            description = "true"
+            colored_invariants = "true">
+        <scrollerposition x = "0"
+                          y = "0"/>
+      </view>
+      <calculation xmlns = "http://www.irt.rwth-aachen.de/download/netlab"
+                   autocalculate_invariants = "false"
+                   firing_rule = "strong"/>
+      <petrinetstatemodel self_loops = "true"
+                          io_extensions = "true"
+                          test_arcs = "allowed_at_all_nodes"
+                          inhibitor_arcs = "allowed_at_input_nodes"/>
+    </toolspecific>
+  </net>
+</pnml>

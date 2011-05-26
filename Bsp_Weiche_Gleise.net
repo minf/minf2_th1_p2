@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><pnml xmlns = "http://www.irt.rwth-aachen.de/download/netlab/pntd/pnsmNet">
+  <net id = "n1"
+       type = "http://www.irt.rwth-aachen.de/download/netlab/pntd/pnsmNet">
+    <name>
+      <text>Bsp_Weiche_Gleise</text>
+    </name>
+    <place id = "p1">
+      <graphics>
+        <position x = "220"
+                  y = "140"/>
+        <dimension x = "40"
+                   y = "40"/>
+      </graphics>
+      <initialMarking>
+        <text>1</text>
+      </initialMarking>
+      <capacity>
+        <text>1</text>
+      </capacity>
+      <name>
+        <text>Gleis 1</text>
+        <graphics>
+          <offset x = "0"
+                  y = "-28"/>
+        </graphics>
+      </name>
+    </place>
+    <place id = "p2">
+      <graphics>
+        <position x = "420"
+                  y = "100"/>
+        <dimension x = "40"
+                   y = "40"/>
+      </graphics>
+      <initialMarking>
+        <text>0</text>
+      </initialMarking>
+      <capacity>
+        <text>1</text>
+      </capacity>
+      <name>
+        <text>Gleis 3</text>
+        <graphics>
+          <offset x = "0"
+                  y = "-28"/>
+        </graphics>
+      </name>
+    </place>
+    <place id = "p3">
+      <graphics>
+        <position x = "420"
+                  y = "200"/>
+        <dimension x = "40"
+                   y = "40"/>
+      </graphics>
+      <initialMarking>
+        <text>0</text>
+      </initialMarking>
+      <capacity>
+        <text>1</text>
+      </capacity>
+      <name>
+        <text>Gleis 4</text>
+        <graphics>
+          <offset x = "0"
+                  y = "-28"/>
+        </graphics>
+      </name>
+    </place>
+    <transition id = "t1">
+      <graphics>
+        <position x = "300"
+                  y = "100"/>
+        <dimension x = "40"
+                   y = "40"/>
+      </graphics>
+      <name>
+        <text>Weiche links</text>
+        <graphics>
+          <offset x = "0"
+                  y = "-28"/>
+        </graphics>
+      </name>
+    </transition>
+    <transition id = "t2">
+      <graphics>
+        <position x = "300"
+                  y = "200"/>
+        <dimension x = "40"
+                   y = "40"/>
+      </graphics>
+      <name>
+        <text>Weiche Rechts</text>
+        <graphics>
+          <offset x = "0"
+                  y = "-28"/>
+        </graphics>
+      </name>
+    </transition>
+    <arc id = "a1"
+         source = "p1"
+         target = "t1"/>
+    <arc id = "a2"
+         source = "t1"
+         target = "p2"/>
+    <arc id = "a3"
+         source = "t2"
+         target = "p3"/>
+    <arc id = "a4"
+         source = "p1"
+         target = "t2"/>
+    <toolspecific tool = "netlab"
+                  version = "1.8">
+      <developer_release version = "1,8,0,0"
+                         build = "3381"
+                         svn_revision = "419"
+                         year = "2007"
+                         month = "06"
+                         day = "22"/>
+      <comments>
+        <comment id = "c1">
+          <graphics>
+            <position x = "180"
+                      y = "180"/>
+          </graphics>
+          <text>Gleis mit Zug</text>
+        </comment>
+        <comment id = "c2">
+          <graphics>
+            <position x = "480"
+                      y = "120"/>
+          </graphics>
+          <text>Freies Gleis</text>
+        </comment>
+        <comment id = "c3">
+          <graphics>
+            <position x = "460"
+                      y = "240"/>
+          </graphics>
+          <text>Freies Gleis</text>
+        </comment>
+        <comment id = "c4">
+          <graphics>
+            <position x = "300"
+                      y = "140"/>
+          </graphics>
+          <text>Weiche</text>
+        </comment>
+      </comments>
+      <view xmlns = "http://www.irt.rwth-aachen.de/download/netlab"
+            zoom = "100"
+            grid = "true"
+            numbering = "true"
+            names = "false"
+            description = "true"
+            colored_invariants = "true">
+        <scrollerposition x = "0"
+                          y = "0"/>
+      </view>
+      <calculation xmlns = "http://www.irt.rwth-aachen.de/download/netlab"
+                   autocalculate_invariants = "false"
+                   firing_rule = "strong"/>
+      <petrinetstatemodel self_loops = "true"
+                          io_extensions = "true"
+                          test_arcs = "allowed_at_all_nodes"
+                          inhibitor_arcs = "allowed_at_input_nodes"/>
+    </toolspecific>
+  </net>
+</pnml>

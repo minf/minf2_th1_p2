@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: iso-8859-15 -*-
 
+import sys
 import gv
 import re
 
@@ -15,7 +16,7 @@ def filter_cont(s):
 ls = []
 lt = []
 ds = {}
-f = open("prak2_aufg2 Erreichbarkeitsgraph.txt", "r")
+f = open(sys.argv[1], "r")
 r1 = re.compile("^(.+)---(.+)---> (.+)")
 r2 = re.compile("(.+):\s+\d+ (.+)")
 for line in f:
@@ -61,4 +62,4 @@ for k in lt:
 
 gv.layout(G, 'dot')
 #gv.render(G, 'xlib')
-gv.render(G, 'pdf', "eg.pdf")
+gv.render(G, 'pdf', sys.argv[2])

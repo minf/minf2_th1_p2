@@ -196,7 +196,47 @@ Vereinfachte Version zur Berechnung der Kondensations- und Überdeckungsgraphen.
 
 (a) Welche Eigenschaften lassen sich aus den Invarianten und den Graphen für Eure Gleisanlage ablesen?
 
-% TODO
+\textbf{Sicherheitseigenschaften:}
+
+%\( P = \{LO, O, OML, OMR, R, MU, MG, MO, UL, SB, SF\} \)
+
+Das Netz ist beschränkt, da eine postive S-Invariante vorliegt.
+
+$I_{P_1} = (1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0)^T$
+
+Auf dem mittleren Streckenabschnitt können sich keine 2 Züge entgegenkommen (wechselseitiger Ausschluss), da $LO + O + OML + OMR + R + MG + UL = Anzahl Zuege$. 
+
+$I_{P_2} = (0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1)^T$
+
+$SB + SF = 1 \implies$ Wechselseitiger Ausschluss von 'Bahnübergang offen' und 'Bahnübergang geschlossen'.
+
+$I_{P_3} = (1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0)^T$
+
+Nie mehr als 1 Zug auf einem Streckenabschnitt und es geht kein Zug verloren, da $LO + O + OML + OMR + R + MU + MO + UL = Anzahl Zuege$
+
+\textbf{Lebendigkeitseigenschaften:}
+
+Das Netz kann reversibel sein, da eine nicht-negative T-Invariante vorliegt.
+
+Das Netz kann lebendig sein, da eine positive T-Invariante vorliegt.
+
+%           T1 T2 T3 T4 T5 T6 T7 T8 T9 10 11 12
+
+$I_{T_1} = (0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0)$
+
+Vollständiger Prozess: Bahnübergang schließen, Bahnübergang öffnen, d.h. wechselnd.
+
+$I_{T_2} = (0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0)$
+
+Vollständiger Prozess: kleine, linke Runde fahren.
+
+$I_{T_3} = (0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0)$
+
+Vollständiger Prozess: kleine, rechte Runde fahren.
+
+$I_{T_4} = (1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1)$
+
+Vollständiger Prozess: große Runde fahren.
 
 (b) Inwiefern ändern sich die Ergebnisse, wenn nur ein Zug fährt oder mehr als zwei Züge fahren. Gelten die Eigenschaften dann in jedem Fall immer noch?
 

@@ -257,7 +257,31 @@ Vollständiger Prozess: große Runde fahren.
 
 (b) Inwiefern ändern sich die Ergebnisse, wenn nur ein Zug fährt oder mehr als zwei Züge fahren. Gelten die Eigenschaften dann in jedem Fall immer noch?
 
-% TODO
+a) Fährt nur noch ein Zug, ändern sich die Eigenschaften des Netzes nicht. 
+
+Es ist lediglich eine Stelle weniger belegt und damit pro Markierung eine oder zwei Transistionen weniger aktiviert. Überdeckungs- und Kondensationsgraph werden damit kleiner.
+
+% TODO ^ Überdeckungs- & Kondensationsgraph berechnen und malen? Morgen nach der Klausur? ;-)
+
+b) Fahren mehr als 2 Züge, lautet die maximale ``gültige'' Startmarkierung
+
+\( M_0 = \begin{pmatrix}
+1 \\ % LO
+1 \\ % O
+1 \\ % OML
+1 \\ % OMR
+1 \\ % R
+1 \\ % MU
+1 \\ % MG
+0 \\ % MO
+1 \\ % UL
+0 \\ % SB
+1 \\ % SF
+\end{pmatrix} \)
+
+Erhalten die verbleibenden Stellen auch eine Markierung, sind aufgrund der Kapazitäten keine Transitionen mehr aktiviert. Damit verliert das Netz seine Lebendigkeitseigenschaft.
+
+% TODO 
 
 (c) Lassen sich alle Eure gewünschten Eigenschaften aus 1. mit Hilfe der Analyse verifizieren? Wenn ja, dann formalisiert Eure gewünschten Eigenschaften und weist sie mithilfe der Analyse nach. Wenn nein, dann formuliert informell, warum sie nicht nachgewiesen werden können.
 

@@ -284,11 +284,31 @@ b) Fahren mehr als 2 Züge, lautet die maximale ``gültige'' Startmarkierung
 
 Erhalten die verbleibenden Stellen auch eine Markierung, sind aufgrund der Kapazitäten keine Transitionen mehr aktiviert. Damit verliert das Netz seine Lebendigkeitseigenschaft.
 
-% TODO 
-
 (c) Lassen sich alle Eure gewünschten Eigenschaften aus 1. mit Hilfe der Analyse verifizieren? Wenn ja, dann formalisiert Eure gewünschten Eigenschaften und weist sie mithilfe der Analyse nach. Wenn nein, dann formuliert informell, warum sie nicht nachgewiesen werden können.
 
-% TODO
+\begin{enumerate}
+\item \textbf{Deadlock:} Es finden sich keine Deadlocks in dem Petrinetz, da kein Zustand durch beliebige Schaltschritte erreicht werden kann, in dem keine weitere Schaltung moeglich ist.
+\item \textbf{Starvation frei:} Keine Transition verhungert, da in einer unendlichen Schaltfolge jede Transition mindestens einmal geschaltet wird.
+\item \textbf{Kollisionsfreiheit:} Da die Kapazitaeten der Stellen auf 1 begrenzt ist, kann ausgeschlossen werden, dass sich 2 Zuege zur gleichen Zeit auf dem selben Gleisabschnitt befinden koennen.
+\item \textbf{Alpenpanorama} Nach dem dritten Satz von M{.}N{.} Taler in der Notation von R{.} Parmesani:\\
+
+\newpage
+
+\begin{verbatim}
+                                  _
+                        .-.      / \        _
+            ^^         /   \    /^./\__   _/ \
+          _        .--'\/\_ \__/.      \ /    \  ^^  ___
+         / \_    _/ ^      \/  __  :'   /\/\  /\  __/   \
+        /    \  /    .'   _/  /  \   ^ /    \/  \/ .`'\_/\
+       /\/\  /\/ :' __  ^/  ^/    `--./.'  ^  `-.\ _    _:\ _
+      /    \/  \  _/  \-' __/.' ^ _   \_   .'\   _/ \ .  __/ \
+    /\  .-   `. \/     \ / -.   _/ \ -. `_/   \ /    `._/  ^  \
+   /  `-.__ ^   / .-'.--'    . /    `--./ .-'  `-.  `-. `.  -  `.
+ @/        `.  / /      `-.   /  .-'   / .   .'   \    \  \  .-  \%
+\end{verbatim}
+Daraus folgt: Alpenpanorama zweiter Klasse.
+\end{enumerate}
 
 \end{enumerate}
 

@@ -282,14 +282,14 @@ b) Fahren mehr als 2 Züge, lautet die maximale ``gültige'' Startmarkierung
 1 \\ % SF
 \end{pmatrix} \)
 
-Erhalten die verbleibenden Stellen auch eine Markierung, sind aufgrund der Kapazitäten keine Transitionen mehr aktiviert. Damit verliert das Netz seine Lebendigkeitseigenschaft.
+Erhalten die verbleibenden leeren Stellen auch eine Markierung, sind aufgrund der Kapazitäten keine Transitionen mehr aktiviert. Damit verliert das Netz seine Lebendigkeitseigenschaft.
 
 (c) Lassen sich alle Eure gewünschten Eigenschaften aus 1. mit Hilfe der Analyse verifizieren? Wenn ja, dann formalisiert Eure gewünschten Eigenschaften und weist sie mithilfe der Analyse nach. Wenn nein, dann formuliert informell, warum sie nicht nachgewiesen werden können.
 
 \begin{enumerate}
-\item \textbf{Deadlock:} Es finden sich keine Deadlocks in dem Petrinetz, da kein Zustand durch beliebige Schaltschritte erreicht werden kann, in dem keine weitere Schaltung moeglich ist.
+\item \textbf{Deadlock:} Es finden sich keine Deadlocks in dem Petrinetz, da kein Zustand durch beliebige Schaltschritte erreicht werden kann, in dem keine weitere Schaltung möglich ist.
 \item \textbf{Starvation frei:} Keine Transition verhungert, da in einer unendlichen Schaltfolge jede Transition mindestens einmal geschaltet wird.
-\item \textbf{Kollisionsfreiheit:} Da die Kapazitaeten der Stellen auf 1 begrenzt ist, kann ausgeschlossen werden, dass sich 2 Zuege zur gleichen Zeit auf dem selben Gleisabschnitt befinden koennen.
+\item \textbf{Kollisionsfreiheit:} Da die Kapazitäten der Stellen auf 1 begrenzt ist, kann ausgeschlossen werden, dass sich 2 Züge zur gleichen Zeit auf dem selben Gleisabschnitt befinden können.
 \item \textbf{Alpenpanorama} Nach dem dritten Satz von M{.}N{.} Taler in der Notation von R{.} Parmesani:\\
 
 \newpage
